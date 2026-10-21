@@ -1,0 +1,2 @@
+-keep class net.ajcloud.mediaprocessing.MediaProcessing { *; }
+-keep class com.utility.SE_MP4 { *; }

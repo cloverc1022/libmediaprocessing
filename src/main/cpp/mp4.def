@@ -1,0 +1,30 @@
+
+LIBRARY "SE_MP4.dll"
+
+EXPORTS SEMP4_GetSdkVer				@1
+EXPORTS SEMP4_PreGetWHFromIFrame	@2
+EXPORTS SEMP4_Create				@3
+EXPORTS SEMP4_Destroy				@4
+EXPORTS SEMP4_OpenMp4File			@5
+EXPORTS SEMP4_CloseMp4File			@6
+EXPORTS SEMP4_AddVideoFrame			@7
+EXPORTS SEMP4_AddAudioFrame			@8
+
+EXPORTS RTSP_GetSdkVer				@9
+EXPORTS RTSP_Create					@10
+EXPORTS RTSP_Destroy				@11
+EXPORTS RTSP_OpenUrl				@12
+EXPORTS RTSP_CloseUrl				@13
+EXPORTS RTSP_ResetUrl				@14
+
+EXPORTS SEMP4Read_Create			@15
+EXPORTS SEMP4Read_Destroy			@16
+EXPORTS SEMP4Read_OpenMp4File		@17
+EXPORTS SEMP4Read_CloseMp4File		@18
+EXPORTS SEMP4Read_SetBeginPos		@19
+EXPORTS SEMP4Read_ReadOneFrame		@20
+
+EXPORTS SEMP4_Init					@21
+EXPORTS SEMP4_Uninit				@22
+
+EXPORTS TS2MP4						@23
