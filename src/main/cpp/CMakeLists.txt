@@ -17,6 +17,7 @@ set_target_properties(ffmpeg PROPERTIES IMPORTED_LOCATION "${FFMPEG_LIBRARY}")
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
         mediaprocessing.cpp
+        sem4_native.cpp
         mpeg4ip_bitstream.cpp
         mpeg4ip_bitstream_api.cpp
         mp4_manager.cpp

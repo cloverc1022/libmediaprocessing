@@ -12,6 +12,12 @@
 #include <string.h>
 #include "audio_aac.h"
 
+#if defined(BUILD_FOR_OHOS) && !defined(LOGI)
+#define LOGI(...)
+#define LOGE(...)
+#define LOGD(...)
+#endif
+
 #ifdef LINUX_JZ
 	#define INT64_MIN	(-0x7fffffffffffffff - 1)
 	#define INT64_MAX	0x7fffffffffffffff
@@ -123,7 +129,7 @@ enum HEVCNALUnitType_E{ //Table 7-1 �C NAL unit type codes and NAL unit type c
 	#include "tchar.h"
 #endif
 
-#if defined(LINUX_ANDROID)
+#if defined(LINUX_ANDROID) && !defined(BUILD_FOR_OHOS)
 	#include <dlfcn.h>
 	#include "SEMP4_android.h"
 

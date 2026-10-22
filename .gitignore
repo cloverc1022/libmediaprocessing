@@ -1,4 +1,5 @@
 /build
+/.build
 /.cxx
 *.o
 *.obj

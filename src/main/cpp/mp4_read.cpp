@@ -2,7 +2,7 @@
 #include "mp4_read.h"
 #include "mp4.h"
 
-#ifdef LINUX_ANDROID
+#if defined(LINUX_ANDROID) && !defined(BUILD_FOR_OHOS)
 	#include <dlfcn.h>
 	#include "SEMP4_android.h"
 #endif
@@ -24,7 +24,7 @@
 #define	TIME_BASE_AV		90000
 #define	TIME_ST_FREQ		90
 
-#ifdef LINUX_ANDROID
+#if defined(LINUX_ANDROID) && !defined(BUILD_FOR_OHOS)
 	#include "SEMP4_android.h"
 	//#define TRACE	LOGI		//juju
 	#define TRACE(...)

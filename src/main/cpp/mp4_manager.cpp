@@ -22,7 +22,7 @@ comment: fix, fix some bugs; +, add some function; *, modify some content
 #include "mp4.h"
 #include "h265_head.h"
 
-#ifdef LINUX_ANDROID
+#if defined(LINUX_ANDROID) && !defined(BUILD_FOR_OHOS)
 	#include <dlfcn.h>
 	#include "SEMP4_android.h"
 #endif
@@ -66,7 +66,7 @@ comment: fix, fix some bugs; +, add some function; *, modify some content
 #define  AAC_ENC_SIZES		 1024
 
 
-#ifdef LINUX_ANDROID
+#if defined(LINUX_ANDROID) && !defined(BUILD_FOR_OHOS)
 	#include "SEMP4_android.h"
 	//#define TRACE	LOGI		//juju
 	#define TRACE(...)
